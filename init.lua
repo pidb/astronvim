@@ -34,6 +34,7 @@ return {
         enabled = true, -- enable or disable format on save globally
         allow_filetypes = { -- enable format on save for specified filetypes only
           -- "go",
+          "rust",
         },
         ignore_filetypes = { -- disable format on save for specified filetypes
           -- "python",
@@ -46,6 +47,10 @@ return {
       -- filter = function(client) -- fully override the default formatting function
       --   return true
       -- end
+    },
+    setup_handlers = {
+      -- add custom handler
+      rust_analyzer = function(_, opts) require("rust-tools").setup { server = opts } end
     },
     -- enable servers that you already have installed without mason
     servers = {

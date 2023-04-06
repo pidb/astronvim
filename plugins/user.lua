@@ -1,4 +1,13 @@
 return {
+  "simrat39/rust-tools.nvim", -- add lsp plugin
+  {
+    "williamboman/mason-lspconfig.nvim",
+    opts = {
+      ensure_installed = { "rust_analyzer" },
+    },
+  },
+
+  "wakatime/vim-wakatime",
   -- You can also add new plugins here as well:
   -- Add plugins, the lazy syntax
   -- "andweeb/presence.nvim",
