@@ -23,6 +23,10 @@ return {
          require('telescope.builtin').current_buffer_fuzzy_find()
       end,
       desc = "Current buffer fuzzy find",
+    },
+    ["<leader>rr"] = {
+      "<cmd>RustRunnables<cr>",
+      desc = "show rust runnables",
     }
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
