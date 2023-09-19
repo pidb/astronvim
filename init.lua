@@ -2,7 +2,7 @@ return {
   -- Configure AstroNvim updates
   updater = {
     remote = "origin", -- remote to use
-    channel = "stable", -- "stable" or "nightly"
+    channel = "nightly", -- "stable" or "nightly"
     version = "latest", -- "latest", tag name, or regex search like "v1.*" to only do updates before v2 (STABLE ONLY)
     branch = "nightly", -- branch name (NIGHTLY ONLY)
     commit = nil, -- commit hash (NIGHTLY ONLY)
@@ -18,8 +18,10 @@ return {
   },
 
   -- Set colorscheme to use
+  colorscheme = "nightfly",
+  -- colorscheme = "astromars",
   -- colorscheme = "astrodark",
-  colorscheme = "neosolarized",
+  -- colorscheme = "neosolarized",
 
   -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
   diagnostics = {
@@ -51,7 +53,8 @@ return {
     },
     setup_handlers = {
       -- add custom handler
-      rust_analyzer = function(_, opts) require("rust-tools").setup { server = opts } end
+      rust_analyzer = function(_, opts) require("rust-tools").setup { server = opts } end,
+      tsserver = function(_, opts) require("typescript").setup { server = opts } end
     },
     -- enable servers that you already have installed without mason
     servers = {
