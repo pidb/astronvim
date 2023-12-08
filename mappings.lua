@@ -27,6 +27,12 @@ return {
     ["<leader>rr"] = {
       "<cmd>RustRunnables<cr>",
       desc = "show rust runnables",
+    },
+    ["<leader>fg"] = {
+      function()
+        require('telescope').extensions.live_grep_args.live_grep_args()
+      end,
+      desc = "Live grep arg"
     }
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command

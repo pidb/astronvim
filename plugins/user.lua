@@ -60,7 +60,14 @@ return {
   {
     "github/copilot.vim",
     lazy = false,
-  }
+  },
+  {
+    "nvim-telescope/telescope-live-grep-args.nvim",
+    lazy = false,
+    config = function()
+      require("telescope").load_extension("live_grep_args")
+    end
+  } 
   -- You can also add new plugins here as well:
   -- Add plugins, the lazy syntax
   -- "andweeb/presence.nvim",
