@@ -1,6 +1,14 @@
 # AstroNvim User Configuration Example
 
 A user configuration template for [AstroNvim](https://github.com/AstroNvim/AstroNvim)
+## Shortkeys
+
+### NeoTree
+- `a`: Adding file
+  > Add `/` in end of name if creating directory
+- `d`: Remove file, directory
+- `m`: Move file, directory
+- `r`: Rename file, directory
 
 ## 🛠️ Installation
 
